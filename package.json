@@ -1,0 +1,55 @@
+{
+  "name": "ipfs-cluster-mini",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest src/tests/*",
+    "build": "tsc -p ./tsconfig.json && cp -r src/utils/files/ dist/utils/files/",
+    "clean": "rm -rf dist",
+    "docs-build": "sh docs/scripts/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kay404/ipfs-cluster-mini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/kay404/ipfs-cluster-mini/issues"
+  },
+  "homepage": "https://github.com/kay404/ipfs-cluster-mini#readme",
+  "dependencies": {
+    "iterable-ndjson": "^1.1.0",
+    "merge-options": "^2.0.0",
+    "readable-stream-miniprogram": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.14",
+    "jest": "^26.0.1",
+    "node-fetch": "^2.6.0",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.3"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(tsx?)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testRegex": "(/src/.*(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testEnvironment": "node"
+  }
+}
